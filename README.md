@@ -2,6 +2,19 @@
 
 This repository trains an image completion model using a PixelRNN-like architecture with ConvLSTM and residual/gated layers. The file `train.py` contains dataset utilities, model components, an SSIM metric implementation, and the training loop.
 
+## Results
+
+### Sample Outputs (Epoch 190)
+
+![Sample Results](checkpoints/samples/sample_epoch190.png)
+
+**Image Layout:**
+- **Top Row**: Occluded input images (with black boxes)
+- **Middle Row**: Model-completed images (inpainted results)
+- **Bottom Row**: Original ground truth images
+
+The model successfully learns to fill in missing regions with visually coherent content that matches the surrounding context.
+
 ## File: `train.py`
 
 ### Class: `ImageCompletionDataset`
